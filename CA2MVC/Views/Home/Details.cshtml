@@ -1,0 +1,39 @@
+﻿@model CA2MVC.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+
+
+
+
+
+
+
+
+    <h4>Actors: @Model.Actors.Count()</h4>
+    <div class="table">
+        <table class="table table-bordered">
+            <tr>
+             
+            <tr>
+                <td>
+                    @foreach (var movies in Model.Actors)
+                    {
+                        <p>
+                         Actor:   @Html.DisplayFor(modelItem => movies.ActorName) ,
+                            Movie Name: @Html.DisplayFor(model => model.MovieName).
+                        </p>
+                    }
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+@Html.ActionLink("Return Home", "Index")
+
+

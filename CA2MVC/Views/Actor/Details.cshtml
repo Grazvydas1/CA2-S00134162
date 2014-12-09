@@ -1,0 +1,36 @@
+﻿@model CA2MVC.Models.Actor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Actor</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MovieID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MovieID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ActorName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ActorName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MovieName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MovieName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ActorID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
